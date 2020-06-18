@@ -1,0 +1,47 @@
+package com.smartinterviewshedular.commonlib.interviwer.model;
+
+import com.smartinterviewshedular.commonlib.technology.model.Technology;
+import com.smartinterviewshedular.commonlib.track.model.Track;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import javax.persistence.*;
+import java.sql.Timestamp;
+import java.util.List;
+
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "interviewer")
+public class Interviewer {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String position;
+    private String firstName;
+    private String lastName;
+    private Boolean isDeleted;
+    private Integer rating;
+    @CreationTimestamp
+    @Column(name = "createdTime", nullable = false, updatable = false)
+    private Timestamp createdTimeStamp;
+    @UpdateTimestamp
+    @Column(name = "updatedTime", nullable = false, updatable = true)
+    private Timestamp updatedTimeStamp;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "track", nullable = false)
+    private Track track;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH,
+            CascadeType.MERGE,
+            CascadeType.PERSIST,
+            CascadeType.REFRESH})
+    @JoinTable(name = "candidateHasTechnology",
+            joinColumns = {@JoinColumn(name = "candidateId", referencedColumnName = "id")
+            },
+            inverseJoinColumns = {@JoinColumn(name = "technologyId", referencedColumnName = "id")})
+    List<Technology> technologyList;
+}
