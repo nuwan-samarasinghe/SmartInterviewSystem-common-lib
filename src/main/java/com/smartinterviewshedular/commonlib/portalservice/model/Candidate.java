@@ -1,7 +1,7 @@
-package com.smartinterviewshedular.commonlib.candidate.model;
+package com.smartinterviewshedular.commonlib.portalservice.model;
 
-import com.smartinterviewshedular.commonlib.technology.model.Technology;
-import com.smartinterviewshedular.commonlib.track.model.Track;
+import com.smartinterviewshedular.commonlib.portalservice.model.Technology;
+import com.smartinterviewshedular.commonlib.portalservice.model.Track;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -29,12 +29,15 @@ public class Candidate {
     private String cvLocation;
     private Boolean isShortListed;
     private Boolean isDeleted;
+
     @CreationTimestamp
     @Column(name = "createdTime", nullable = false, updatable = false)
     private Timestamp createdTimeStamp;
+
     @UpdateTimestamp
     @Column(name = "updatedTime", nullable = false, updatable = true)
     private Timestamp updatedTimeStamp;
+
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "track", nullable = false)
     private Track track;
@@ -44,8 +47,7 @@ public class Candidate {
             CascadeType.PERSIST,
             CascadeType.REFRESH})
     @JoinTable(name = "candidateHasTechnology",
-            joinColumns = {@JoinColumn(name = "candidateId", referencedColumnName = "id")
-            },
+            joinColumns = {@JoinColumn(name = "candidateId", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "technologyId", referencedColumnName = "id")})
     List<Technology> technologyList;
 }

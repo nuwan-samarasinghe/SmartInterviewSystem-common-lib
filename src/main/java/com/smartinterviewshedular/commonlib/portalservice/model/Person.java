@@ -1,4 +1,4 @@
-package com.smartinterviewshedular.commonlib.common.model;
+package com.smartinterviewshedular.commonlib.portalservice.model;
 
 import lombok.Data;
 

@@ -1,7 +1,7 @@
-package com.smartinterviewshedular.commonlib.interviwer.model;
+package com.smartinterviewshedular.commonlib.portalservice.model;
 
-import com.smartinterviewshedular.commonlib.technology.model.Technology;
-import com.smartinterviewshedular.commonlib.track.model.Track;
+import com.smartinterviewshedular.commonlib.portalservice.model.Technology;
+import com.smartinterviewshedular.commonlib.portalservice.model.Track;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

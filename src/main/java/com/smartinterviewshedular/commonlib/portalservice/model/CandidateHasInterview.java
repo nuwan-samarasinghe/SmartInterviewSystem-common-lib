@@ -1,4 +1,4 @@
-package com.smartinterviewshedular.commonlib.candidate.model;
+package com.smartinterviewshedular.commonlib.portalservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

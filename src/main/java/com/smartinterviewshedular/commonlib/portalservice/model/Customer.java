@@ -1,6 +1,6 @@
-package com.smartinterviewshedular.commonlib.customer.model;
+package com.smartinterviewshedular.commonlib.portalservice.model;
 
-import com.smartinterviewshedular.commonlib.common.model.Person;
+import com.smartinterviewshedular.commonlib.portalservice.model.Person;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

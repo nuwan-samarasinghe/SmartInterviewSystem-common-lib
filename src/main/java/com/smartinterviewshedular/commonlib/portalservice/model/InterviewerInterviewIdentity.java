@@ -1,4 +1,4 @@
-package com.smartinterviewshedular.commonlib.candidate.model;
+package com.smartinterviewshedular.commonlib.portalservice.model;
 
 import lombok.Data;
 
@@ -8,9 +8,9 @@ import java.io.Serializable;
 
 @Embeddable
 @Data
-public class CandidateInterviewIdentity implements Serializable {
+public class InterviewerInterviewIdentity implements Serializable {
     @Column(nullable = false)
     private Integer interviewId;
     @Column(nullable = false)
-    private Integer candidateId;
+    private Integer interviewerId;
 }

@@ -1,6 +1,5 @@
-package com.smartinterviewshedular.commonlib.vacancy.model;
+package com.smartinterviewshedular.commonlib.portalservice.model;
 
-import com.smartinterviewshedular.commonlib.technology.model.Technology;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;

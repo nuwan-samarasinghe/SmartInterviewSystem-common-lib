@@ -1,10 +1,10 @@
-package com.smartinterviewshedular.commonlib.candidate.model;
+package com.smartinterviewshedular.commonlib.portalservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.lang.Nullable;
-import com.smartinterviewshedular.commonlib.interview.model.Interview;
+import com.smartinterviewshedular.commonlib.portalservice.model.Interview;
 
 @Data
 @NoArgsConstructor

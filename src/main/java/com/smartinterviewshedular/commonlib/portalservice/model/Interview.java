@@ -1,11 +1,11 @@
-package com.smartinterviewshedular.commonlib.interview.model;
+package com.smartinterviewshedular.commonlib.portalservice.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.smartinterviewshedular.commonlib.candidate.model.CandidateInterviewStatus;
-import com.smartinterviewshedular.commonlib.candidate.model.CandidateInterviewStatusResponse;
-import com.smartinterviewshedular.commonlib.interviwer.model.InterviewerInterviewStatus;
-import com.smartinterviewshedular.commonlib.interviwer.model.InterviewerInterviewStatusResponse;
+import com.smartinterviewshedular.commonlib.portalservice.model.CandidateInterviewStatus;
+import com.smartinterviewshedular.commonlib.portalservice.model.CandidateInterviewStatusResponse;
+import com.smartinterviewshedular.commonlib.portalservice.model.InterviewerInterviewStatus;
+import com.smartinterviewshedular.commonlib.portalservice.model.InterviewerInterviewStatusResponse;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
